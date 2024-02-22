@@ -1,0 +1,21 @@
+@use '../abstract/fonts';
+@use '../abstract/colors';
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: fonts.$main;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+header, main, footer {
+    padding: 0 8rem;
+}
+
+body {
+    min-height: 100vh;
+    background-color: colors.$background;
+}

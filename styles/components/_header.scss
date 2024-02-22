@@ -1,0 +1,31 @@
+@use '../abstract/colors';
+@use '../abstract/mixins';
+
+$header-height: 5rem;
+
+header {
+  @include mixins.centralize(space-between);
+
+  background-color: colors.$dark-background;
+  color: colors.$white;
+  min-height: $header-height;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.821);
+
+  #logo {
+    color: colors.$primary-color;
+    font-size: 1.5rem;
+  }
+
+  nav > ul {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+
+    li {
+      @include mixins.centralize(space-between);
+
+      height: $header-height;
+      padding: 1rem;
+    }
+  }
+}
