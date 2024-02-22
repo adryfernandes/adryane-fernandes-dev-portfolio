@@ -1,4 +1,4 @@
-@mixin centralize($justify-content, $flex-direction:row) {
+@mixin centralize($justify-content, $flex-direction: row) {
     display: flex;
     align-items: center;
     justify-content: $justify-content;
@@ -7,5 +7,25 @@
 
 @mixin reset-link {
     text-decoration: none;
-    color: inherit; 
+    color: inherit;
+}
+
+@mixin breakpoint($name) {
+    @if $name ==“small” {
+        @media (max-width: 767px) {
+            @content;
+        }
+    }
+
+    @else if $name ==“medium” {
+        @media (max-width: 1024px) {
+            @content;
+        }
+    }
+
+    @else if $name ==“large” {
+        @media (min-width: 1025px) {
+            @content;
+        }
+    }
 }

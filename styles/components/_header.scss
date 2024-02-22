@@ -5,6 +5,10 @@
 header {
   @include mixins.centralize(space-between);
 
+  @include mixins.breakpoint(“medium”) {
+    @include mixins.centralize(center);
+  }
+
   background-color: colors.$dark-background;
   color: colors.$white;
   min-height: sizes.$header-height;
@@ -13,28 +17,38 @@ header {
   #logo {
     color: colors.$primary;
     font-size: 1.5rem;
+
+    @include mixins.breakpoint(“medium”) {
+      font-size: 1rem;
+    }
   }
 
-  nav > ul {
-    list-style-type: none;
-    display: flex;
-    gap: 2rem;
+  nav {
+    @include mixins.breakpoint(“medium”) {
+      display: none;
+    }
 
-    li {
-      @include mixins.centralize(space-between);
+    ul {
+      list-style-type: none;
+      display: flex;
+      gap: 2rem;
 
-      cursor: pointer;
-      height: sizes.$header-height;
-      padding: 1rem;
+      li {
+        @include mixins.centralize(space-between);
 
-      &:hover {
-        border-bottom: solid 3px colors.$primary;
-        color: colors.$primary;
-      }
+        cursor: pointer;
+        height: sizes.$header-height;
+        padding: 1rem;
 
-      a {
-        @include mixins.reset-link;
+        &:hover {
+          border-bottom: solid 3px colors.$primary;
+          color: colors.$primary;
+        }
 
+        a {
+          @include mixins.reset-link;
+
+        }
       }
     }
   }

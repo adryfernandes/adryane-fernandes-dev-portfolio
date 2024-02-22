@@ -1,10 +1,17 @@
 @use '../abstract/colors';
 @use '../abstract/mixins';
+@use '../abstract/sizes';
 
 section#home {
   #title {
     font-size: 5rem;
     text-align: center;
+
+    @include mixins.breakpoint(“medium”) {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: .5rem;
+    }
 
     span {
       display: block;
@@ -17,11 +24,20 @@ section#home {
     font-size: 1.8rem;
     font-weight: 300;
     text-align: center;
+
+    @include mixins.breakpoint(“medium”) {
+      font-size: .8rem;
+      margin: 0;
+    }
   }
 
   button {
     width: 18rem;
     margin-top: 2rem;
+
+    @include mixins.breakpoint(“medium”) {
+      width: 12rem;
+    }
   }
 
   #contacts-links {
@@ -35,11 +51,20 @@ section#home {
     gap: 1.2rem;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.821);
 
+    @include mixins.breakpoint(“medium”) {
+      @include mixins.centralize(center, row);
+
+      position: absolute;
+      bottom: 0;
+      margin: auto;
+      box-shadow: none;
+    }
+
     a {
       cursor: pointer;
       transition: transform 0.3s ease;
 
-      &:hover{
+      &:hover {
         transform: scale(1.1);
       }
 

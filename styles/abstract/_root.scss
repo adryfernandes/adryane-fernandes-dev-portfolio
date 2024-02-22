@@ -1,5 +1,6 @@
 @use '../abstract/fonts';
 @use '../abstract/colors';
+@use '../abstract/mixins';
 
 * {
     margin: 0;
@@ -15,7 +16,11 @@
 header,
 main,
 footer {
-    padding: 0 8rem;
+    padding: 0 1rem;
+
+    @include mixins.breakpoint(“large”) {
+        padding: 0 8rem;
+    }
 }
 
 body {
