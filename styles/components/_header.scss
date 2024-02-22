@@ -29,7 +29,6 @@ header {
     }
 
     ul {
-      list-style-type: none;
       display: flex;
       gap: 2rem;
 
@@ -42,12 +41,11 @@ header {
 
         &:hover {
           border-bottom: solid 3px colors.$primary;
-          color: colors.$primary;
+          color: colors.$primary; 
         }
 
         a {
           @include mixins.reset-link;
-
         }
       }
     }

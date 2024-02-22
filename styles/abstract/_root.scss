@@ -13,6 +13,14 @@
     user-select: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style-type: none;
+}
+
 header,
 main,
 footer {
@@ -38,5 +46,6 @@ body {
     &::-webkit-scrollbar-thumb {
         background-color: colors.$primary-dark;
         border-radius: 10px;
+        border: solid 3px colors.$background;
     }
 }

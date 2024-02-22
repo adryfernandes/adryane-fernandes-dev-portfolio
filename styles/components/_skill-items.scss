@@ -1,0 +1,14 @@
+@use '../abstract/colors';
+@use '../abstract/mixins';
+
+.skill-items {
+  @include mixins.centralize(center);
+  gap: .5rem;
+
+  li {
+    @include mixins.centralize(center);
+    background-color: colors.$dark-background;
+    padding: .5rem 1rem;
+    border-radius: 8px;
+  }
+}

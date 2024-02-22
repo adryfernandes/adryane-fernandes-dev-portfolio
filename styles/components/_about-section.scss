@@ -1,0 +1,58 @@
+@use '../abstract/colors';
+@use '../abstract/mixins';
+@use '../abstract/sizes';
+
+section#about {
+  min-height: 100vh;
+
+  #content {
+    @include mixins.centralize(center);
+    width: 100%;
+    font-size: 1.2rem;
+    gap: 1rem;
+    margin-top: 2rem;
+
+    @include mixins.breakpoint(“medium”) {
+      @include mixins.centralize(center, column);
+      margin-top: 0;
+    }
+
+    div {
+      padding: 1rem;
+      max-width: 50%;
+      height: 50vh;
+
+      @include mixins.breakpoint(“medium”) {
+        padding: 0;
+      }
+
+      #title {
+        font-size: 1.2rem;
+        margin-bottom: .8rem;
+        color: colors.$primary;
+      }
+
+      &:first-child {
+        p {
+          text-align: justify;
+
+          strong {
+            color: colors.$primary;
+          }
+        }
+      }
+
+      &:last-child {
+        max-width: 50vw;
+
+        ul {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(3, 3rem);
+
+          height: 100%;
+        }
+      }
+    }
+  }
+}

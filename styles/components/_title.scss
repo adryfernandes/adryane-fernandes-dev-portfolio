@@ -1,0 +1,32 @@
+@use '../abstract/mixins';
+@use '../abstract/colors';
+
+.section-title {
+  @include mixins.centralize(center, column);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+
+  @include mixins.breakpoint(“medium”) {
+    font-size: 1.5rem;
+  }
+
+  @include mixins.breakpoint(“medium”) {
+    margin-top: 2.5rem;
+  }
+
+  &:after {
+    content: "-";
+    margin-top: 1rem;
+    font-size: .6rem;
+    width: 3.8rem;
+    border-radius: 10px;
+    color: colors.$primary;
+    background-color: colors.$primary;
+
+    @include mixins.breakpoint(“medium”) {
+      font-size: .4rem;
+      width: 3rem;
+      margin-top: .8rem;
+    }
+  }
+}
