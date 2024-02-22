@@ -1,5 +1,11 @@
-@mixin centralize($justify-content){
+@mixin centralize($justify-content, $flex-direction:row) {
     display: flex;
     align-items: center;
     justify-content: $justify-content;
+    flex-direction: $flex-direction;
+}
+
+@mixin reset-link {
+    text-decoration: none;
+    color: inherit; 
 }

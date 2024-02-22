@@ -6,9 +6,14 @@
   font-family: "Montserrat", sans-serif;
   vertical-align: baseline;
   box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
-header, main, footer {
+header,
+main,
+footer {
   padding: 0 8rem;
 }
 
@@ -16,11 +21,22 @@ body {
   min-height: 100vh;
   background-color: #101419;
 }
+body::-webkit-scrollbar {
+  width: 8px;
+}
+body::-webkit-scrollbar-track {
+  background: #101419;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #456335;
+  border-radius: 10px;
+}
 
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: row;
   background-color: #0E1116;
   color: #ffffff;
   min-height: 5rem;
@@ -39,6 +55,87 @@ header nav > ul li {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: row;
+  cursor: pointer;
   height: 5rem;
   padding: 1rem;
+}
+header nav > ul li:hover {
+  border-bottom: solid 3px #618B4A;
+  color: #618B4A;
+}
+header nav > ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: calc(100vh - 5rem);
+  color: #ffffff;
+}
+
+section#home #title {
+  font-size: 5rem;
+  text-align: center;
+}
+section#home #title span {
+  display: block;
+  color: #618B4A;
+}
+section#home #subtitle {
+  margin: 1.2rem 8rem;
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-align: center;
+}
+section#home button {
+  width: 18rem;
+  margin-top: 2rem;
+}
+section#home #contacts-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #0E1116;
+  position: fixed;
+  left: 0;
+  border-radius: 0 10px 10px 0;
+  padding: 1.2rem 1rem;
+  gap: 1.2rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.821);
+}
+section#home #contacts-links a {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+section#home #contacts-links a:hover {
+  transform: scale(1.1);
+}
+section#home #contacts-links a img {
+  width: 3rem;
+}
+
+/* General button style */
+button {
+  background-color: #618B4A;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s;
+}
+button:hover {
+  background: #456335;
+}
+button:active {
+  background: #456335;
+  top: 2px;
 }/*# sourceMappingURL=index.css.map */

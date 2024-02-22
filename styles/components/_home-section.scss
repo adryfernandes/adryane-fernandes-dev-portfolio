@@ -1,0 +1,52 @@
+@use '../abstract/colors';
+@use '../abstract/mixins';
+
+section#home {
+  #title {
+    font-size: 5rem;
+    text-align: center;
+
+    span {
+      display: block;
+      color: colors.$primary;
+    }
+  }
+
+  #subtitle {
+    margin: 1.2rem 8rem;
+    font-size: 1.8rem;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  button {
+    width: 18rem;
+    margin-top: 2rem;
+  }
+
+  #contacts-links {
+    @include mixins.centralize(center, column);
+
+    background-color: colors.$dark-background;
+    position: fixed;
+    left: 0;
+    border-radius: 0 10px 10px 0;
+    padding: 1.2rem 1rem;
+    gap: 1.2rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.821);
+
+    a {
+      cursor: pointer;
+      transition: transform 0.3s ease;
+
+      &:hover{
+        transform: scale(1.1);
+      }
+
+      img {
+        width: 3rem;
+      }
+    }
+
+  }
+}

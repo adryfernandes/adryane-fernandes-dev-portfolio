@@ -1,0 +1,11 @@
+@use '../abstract/sizes';
+@use '../abstract/mixins';
+@use '../abstract/colors';
+
+main {
+  section {
+    @include mixins.centralize(center, column);
+    min-height: calc(100vh - sizes.$header-height);
+    color: colors.$white;
+  }
+}

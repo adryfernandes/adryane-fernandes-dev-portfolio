@@ -1,18 +1,17 @@
 @use '../abstract/colors';
 @use '../abstract/mixins';
-
-$header-height: 5rem;
+@use '../abstract/sizes';
 
 header {
   @include mixins.centralize(space-between);
 
   background-color: colors.$dark-background;
   color: colors.$white;
-  min-height: $header-height;
+  min-height: sizes.$header-height;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.821);
 
   #logo {
-    color: colors.$primary-color;
+    color: colors.$primary;
     font-size: 1.5rem;
   }
 
@@ -24,8 +23,19 @@ header {
     li {
       @include mixins.centralize(space-between);
 
-      height: $header-height;
+      cursor: pointer;
+      height: sizes.$header-height;
       padding: 1rem;
+
+      &:hover {
+        border-bottom: solid 3px colors.$primary;
+        color: colors.$primary;
+      }
+
+      a {
+        @include mixins.reset-link;
+
+      }
     }
   }
 }
