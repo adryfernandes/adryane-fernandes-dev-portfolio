@@ -4,22 +4,21 @@
 
 header {
   @include mixins.centralize(space-between);
-
-  @include mixins.breakpoint(“medium”) {
-    @include mixins.centralize(center);
-  }
-
   background-color: colors.$dark-background;
   color: colors.$white;
   min-height: sizes.$header-height;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.821);
+
+  @include mixins.breakpoint(“medium”) {
+    @include mixins.centralize(center);
+  }
 
   #logo {
     color: colors.$primary;
     font-size: 1.5rem;
 
     @include mixins.breakpoint(“medium”) {
-      font-size: 1rem;
+      font-size: 1.5rem;
     }
   }
 

@@ -72,7 +72,7 @@ header #logo {
 }
 @media (max-width: 1024px) {
   header #logo {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }
 @media (max-width: 1024px) {
@@ -135,6 +135,71 @@ button:active {
   }
 }
 
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+  }
+}
+.section-title:after {
+  content: "-";
+  margin-top: 1rem;
+  font-size: 0.6rem;
+  width: 3.8rem;
+  border-radius: 10px;
+  color: #618B4A;
+  background-color: #618B4A;
+}
+@media (max-width: 1024px) {
+  .section-title:after {
+    font-size: 0.4rem;
+    width: 3rem;
+    margin-top: 0.8rem;
+  }
+}
+
+.skill-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.skill-items li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background-color: #0E1116;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
+.section-subtitle {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+@media (max-width: 1024px) {
+  .section-subtitle {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+}
+
+.project-card img {
+  width: 100%;
+}
+
 section#home {
   min-height: calc(100vh - 5rem);
 }
@@ -144,7 +209,7 @@ section#home #title {
 }
 @media (max-width: 1024px) {
   section#home #title {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-top: 2rem;
     margin-bottom: 0.5rem;
   }
@@ -235,10 +300,11 @@ section#about #content {
 section#about #content div {
   padding: 1rem;
   max-width: 50%;
-  height: 50vh;
+  min-height: 50vh;
 }
 @media (max-width: 1024px) {
   section#about #content div {
+    max-width: 100%;
     padding: 0;
   }
 }
@@ -253,8 +319,10 @@ section#about #content div:first-child p {
 section#about #content div:first-child p strong {
   color: #618B4A;
 }
-section#about #content div:last-child {
-  max-width: 50vw;
+@media (max-width: 1024px) {
+  section#about #content div:last-child {
+    margin-top: 2rem;
+  }
 }
 section#about #content div:last-child ul {
   display: grid;
@@ -262,55 +330,8 @@ section#about #content div:last-child ul {
   grid-template-rows: repeat(3, 3rem);
   height: 100%;
 }
-
-.section-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
 @media (max-width: 1024px) {
-  .section-title {
-    font-size: 1.5rem;
+  section#about #content div:last-child ul {
+    grid-template-columns: repeat(2, 1fr);
   }
-}
-@media (max-width: 1024px) {
-  .section-title {
-    margin-top: 2.5rem;
-  }
-}
-.section-title:after {
-  content: "-";
-  margin-top: 1rem;
-  font-size: 0.6rem;
-  width: 3.8rem;
-  border-radius: 10px;
-  color: #618B4A;
-  background-color: #618B4A;
-}
-@media (max-width: 1024px) {
-  .section-title:after {
-    font-size: 0.4rem;
-    width: 3rem;
-    margin-top: 0.8rem;
-  }
-}
-
-.skill-items {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  gap: 0.5rem;
-}
-.skill-items li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  background-color: #0E1116;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
 }/*# sourceMappingURL=index.css.map */

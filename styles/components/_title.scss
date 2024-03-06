@@ -8,9 +8,6 @@
 
   @include mixins.breakpoint(“medium”) {
     font-size: 1.5rem;
-  }
-
-  @include mixins.breakpoint(“medium”) {
     margin-top: 2.5rem;
   }
 

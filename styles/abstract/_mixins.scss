@@ -1,6 +1,6 @@
-@mixin centralize($justify-content, $flex-direction: row) {
+@mixin centralize($justify-content, $flex-direction: row, $align-items: center) {
     display: flex;
-    align-items: center;
+    align-items: $align-items;
     justify-content: $justify-content;
     flex-direction: $flex-direction;
 }

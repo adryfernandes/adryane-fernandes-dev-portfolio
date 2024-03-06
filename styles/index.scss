@@ -3,7 +3,10 @@
 @use './components/header';
 @use './components/main';
 @use './components/button';
-@use './components/home-section';
-@use './components/about-section';
 @use './components/title';
 @use './components/skill-items';
+@use './components/subtitle';
+@use './components/project-card';
+
+@use './sections/home-section';
+@use './sections/about-section';

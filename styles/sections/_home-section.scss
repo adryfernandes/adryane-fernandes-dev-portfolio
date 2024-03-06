@@ -10,7 +10,7 @@ section#home {
     text-align: center;
 
     @include mixins.breakpoint(“medium”) {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       margin-top: 2rem;
       margin-bottom: .5rem;
     }
