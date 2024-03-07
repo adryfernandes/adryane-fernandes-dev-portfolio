@@ -10,7 +10,7 @@ header {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.821);
 
   @include mixins.breakpoint(“medium”) {
-    @include mixins.centralize(center);
+    @include mixins.centralize();
   }
 
   #logo {

@@ -2,11 +2,11 @@
 @use '../abstract/mixins';
 
 .skill-items {
-  @include mixins.centralize(center);
+  @include mixins.centralize();
   gap: .5rem;
 
   li {
-    @include mixins.centralize(center);
+    @include mixins.centralize();
     background-color: colors.$dark-background;
     border-radius: 8px;
     padding: .5rem 1rem;
