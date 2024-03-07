@@ -1,0 +1,38 @@
+@use '../abstract/mixins';
+
+section#contact {
+  min-height: 100vh;
+
+  form {
+    width: 80%;
+    margin-top: 3rem;
+
+    @include mixins.breakpoint(“medium”) {
+      width: 100%;
+    }
+
+    fieldset {
+      margin-top: 1rem;
+    }
+
+    div {
+      width: 100%;
+      display: flex;
+      justify-content: right;
+      
+      button {
+        width: 30%;
+        margin-top: 1rem;
+
+        @include mixins.breakpoint(“medium”) {
+          width: 100%;
+        }
+      }
+    }
+
+    p {
+      font-size: .8rem;
+      margin-top: -10px;
+    }
+  }
+}

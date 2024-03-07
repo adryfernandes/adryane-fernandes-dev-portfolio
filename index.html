@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600;700&display=swap"
     rel="stylesheet" />
+  <script src="/scripts/index.js"></script>
   <title>Adryane Fernandes</title>
 </head>
 
@@ -113,7 +114,8 @@
     </section>
     <section id="projects">
       <h3 class="section-title">Projetos</h3>
-      <h4 class="section-subtitle">Aqui você encontrará alguns dos projetos pessoais e de clientes que criei, cada projeto com suas particularidades.</h4>
+      <h4 class="section-subtitle">Aqui você encontrará alguns dos projetos pessoais e de clientes que criei, cada
+        projeto com suas particularidades.</h4>
 
       <div class="project-card">
         <div>
@@ -121,14 +123,36 @@
         </div>
         <div>
           <h4>Hacorda</h4>
-          <p>Hacorda é o site pessoal da pscicóloga e artista Mariana Castro, o intuito do site é contar mais sobre essa profissional e mostrar seus projetos e trabalhos incriveis.</p>
+          <p>Hacorda é o site pessoal da pscicóloga e artista Mariana Castro, o intuito do site é contar mais sobre essa
+            profissional e mostrar seus projetos e trabalhos incriveis.</p>
           <ul class="skill-items">
             <li> Wordpress </li>
-            <li> Figma </li>
+            <li> Elementor </li>
           </ul>
           <button>Ver site</button>
         </div>
       </div>
+    </section>
+    <section id="contact">
+      <h3 class="section-title">Contato</h3>
+      <h4 class="section-subtitle">Sinta-se à vontade para entrar em contato comigo enviando o formulário abaixo e
+        retornarei o mais breve possível.</h4>
+
+      <form>
+        <fieldset>
+          <label for="subject">Assunto:</label><br>
+          <input type="text" id="subject" name="subject" required><br><br>
+        </fieldset>
+        <fieldset>
+          <label for="message">Mensagem:</label><br>
+          <textarea id="message" name="message" rows="4" required></textarea><br><br>
+        </fieldset>
+        <p>*você será redirecionado para o seu provedor de e-mail</p>
+
+        <div>
+          <button value="Enviar" onclick="enviarEmail()">Enviar e-mail</button>
+        </div>
+      </form>
     </section>
   </main>
   <footer>
