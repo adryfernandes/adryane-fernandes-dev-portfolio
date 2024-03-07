@@ -1,33 +1,54 @@
 @use '../abstract/mixins';
 
 .project-card {
-  @include mixins.centralize(space-between);
   width: 100%;
-  height: 80vh;
+  min-height: 80vh;
   margin-top: 4rem;
-  margin-bottom: 5rem;
 
-  img {
-    width: 60%;
+  display: grid;
+  grid-template-columns: 60% 1fr;
+
+  @include mixins.breakpoint(“medium”) {
+    grid-template-columns: 100%;
   }
 
-  div{
-    @include mixins.centralize(flex-start, column, flex-start);
-    margin-left: 4rem;
-    width: 40%;
+  div {
+    &:first-child {
+      @include mixins.centralize(center);
 
-    h4 {
-      font-size: 2rem;
+      img {
+        width: 100%;
+      }
     }
 
-    p{
-      margin-top: 1rem;
-      margin-bottom: 2rem;
+    &:last-child {
+      @include mixins.centralize(center, column, flex-start);
+      margin-left: 4rem;
+      width: 100%;
+
+      @include mixins.breakpoint(“medium”) {
+        // @include mixins.centralize(center, column);
+        margin-top: 1rem;
+        margin-left: 0;
+      }
+
+      h4 {
+        font-size: 2rem;
+
+        @include mixins.breakpoint(“medium”) {
+          font-size: 1.5rem;
+        }
+      }
+
+      p {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+      }
     }
   }
 
-  button{
+  button {
     margin-top: 2rem;
-    
+    width: 100%;
   }
 }
