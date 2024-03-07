@@ -1,6 +1,5 @@
 @use './abstract/root';
 
-@use './components/header';
 @use './components/main';
 @use './components/button';
 @use './components/title';
@@ -9,7 +8,9 @@
 @use './components/project-card';
 @use './components/input';
 
+@use './sections/header';
 @use './sections/home-section';
 @use './sections/about-section';
 @use './sections/projects-section';
 @use './sections/contact-section';
+@use './sections/footer';

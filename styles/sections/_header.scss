@@ -7,7 +7,7 @@ header {
   background-color: colors.$dark-background;
   color: colors.$white;
   min-height: sizes.$header-height;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.821);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.821);
 
   @include mixins.breakpoint(“medium”) {
     @include mixins.centralize();
@@ -41,10 +41,6 @@ header {
         &:hover {
           border-bottom: solid 3px colors.$primary;
           color: colors.$primary; 
-        }
-
-        a {
-          @include mixins.reset-link;
         }
       }
     }

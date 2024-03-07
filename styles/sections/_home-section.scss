@@ -10,7 +10,7 @@ section#home {
     text-align: center;
 
     @include mixins.breakpoint(“medium”) {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
       margin-top: 2rem;
       margin-bottom: .5rem;
     }
@@ -56,6 +56,8 @@ section#home {
     @include mixins.breakpoint(“medium”) {
       @include mixins.centralize(center, row);
 
+      padding: .8rem .8rem;
+      gap: .6rem;
       position: absolute;
       bottom: 0;
       margin: auto;
@@ -72,6 +74,10 @@ section#home {
 
       img {
         width: 3rem;
+
+        @include mixins.breakpoint(“medium”) {
+          width: 2rem;
+        }
       }
     }
 

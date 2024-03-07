@@ -1,0 +1,80 @@
+@use '../abstract/colors';
+@use '../abstract/mixins';
+
+footer {
+  background-color: colors.$dark-background;
+  min-height: 100px;
+  padding: 3rem 8rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.821);
+  color: colors.$white;
+
+  @include mixins.breakpoint(“medium”) {
+    padding: 3rem 1rem;
+  }
+
+  div#content {
+    @include mixins.centralize(space-between, row, flex-start);
+    margin-bottom: 3rem;
+
+    @include mixins.breakpoint(“medium”) {
+      @include mixins.centralize(center, column, flex-start);
+    }
+
+    h5 {
+      margin-bottom: 1rem;
+    }
+
+    div {
+      &:first-child {
+        min-width: 50%;
+
+        @include mixins.breakpoint(“medium”) {
+          min-width: 100%;
+          margin-bottom: 2rem;
+        }
+
+        a {
+          @include mixins.breakpoint(“medium”) {
+            display: block;
+          }
+          
+          color: colors.$primary;
+          text-decoration: underline;
+        }
+      }
+
+      &:last-child {
+        min-width: 50%;
+        text-align: left;
+
+        a{
+          img{
+            width: 2.5rem;
+            margin-right: .5rem;
+          }
+        }
+      }
+    }
+
+  }
+
+  div#copyright {
+    width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 1rem;
+    border-top: 1px solid colors.$white;
+
+    span {
+      @include mixins.breakpoint(“medium”) {
+        display: block;
+      }
+    }
+
+    a {
+      color: colors.$primary;
+      text-decoration: underline;
+    }
+  }
+
+}

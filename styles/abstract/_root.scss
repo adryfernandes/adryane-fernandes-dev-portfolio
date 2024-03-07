@@ -31,6 +31,15 @@ footer {
     }
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+
+    a:visited {
+        color: inherit;
+    }
+}
+
 body {
     min-height: 100vh;
     background-color: colors.$background;
